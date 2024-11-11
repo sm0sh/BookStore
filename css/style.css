@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Set a global font family */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  background-color: rgb(60, 124, 197);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+}
+
+.nav-right {
+  text-align: right;
+  float: right;
+}
+
+.nav-right li {
+  display: inline;
+  float: left;
+  padding-left: 15px;
+}
+
+.nav-right li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-right li a:hover {
+  background-color: rgb(31, 199, 106);
+}
+
+.nav-right .active {
+  background-color: #04AA6D;
+}
+
+/* Section 1 */
+.section-1 {
+  padding: 40px;
+  background-image: url("https://ak0.picdn.net/shutterstock/videos/20344780/thumb/1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 550px;
+}
+
+.section-1-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.section-1-text h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.section-1-text p {
+  font-size: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: rgb(31, 199, 106);
+}
+
+/* Section 2 */
+.section-2 {
+  padding: 35px;
+  text-align: center;
+}
+
+.section-2 h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.image-holder {
+  flex: 1 1 200px;
+  max-width: 250px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.image-holder img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.image-holder:hover {
+  transform: scale(1.05);
+}
+
+/* Section 3 */
+.section-3 {
+  padding: 35px;
+}
+
+.view-card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  max-width: 250px;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/* Section 4: Brands */
+.section-4 {
+  padding: 35px;
+  text-align: center;
+}
+
+.section-4 h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.brand {
+  display: inline-block;
+  margin: 10px;
+}
+
+.brand img {
+  height: 175px;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Section 5: Contact Us */
+.section-5 {
+  padding: 35px;
+  background-color: rgb(224, 219, 219);
+}
+
+.section-5 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-5 p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  border-radius: 5px;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .column {
+      width: 100%;
+  }
+
+  .brand {
+      width: 50%;
+  }
+
+  .section-1-text h1 {
+      font-size: 40px;
+  }
+}

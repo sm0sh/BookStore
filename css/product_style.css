@@ -1,0 +1,297 @@
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; /* Set a global font family */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  background-color: rgb(60, 124, 197);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 20px;
+}
+
+.nav-right {
+  text-align: right;
+  float: right;
+}
+
+.nav-right li {
+  display: inline;
+  float: left;
+  padding-left: 15px;
+}
+
+.nav-right li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-right li a:hover {
+  background-color: rgb(31, 199, 106);
+}
+
+.nav-right .active {
+  background-color: #04AA6D;
+}
+
+/* Section 1 - Hero Image */
+.section-1 {
+  padding: 40px;
+  background-image: url("https://ak0.picdn.net/shutterstock/videos/20344780/thumb/1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 550px;
+  background-size: 100% 100%;
+}
+
+.section-1-text {
+  display: block;
+  border: black;
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
+.section-1 p {
+  font-size: 20px;
+  color: white;
+}
+
+/* Featured Products */
+.section-2 {
+  padding: 35px;
+}
+
+.gallery div {
+  display: inline !important;
+}
+
+.section-2 a {
+  text-decoration: none;
+}
+
+.section-2 p {
+  color: black;
+  text-align: center;
+}
+
+div.gallery a:hover {
+  border: 1px solid white;
+}
+
+div.gallery image-holder desc {
+  text-align: center;
+}
+
+img {
+  height: 300px;
+  width: 250px;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  border-radius: 5px;
+  color: white;
+  background-color: blue;
+  font-size: 20px;
+  text-decoration: none;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+}
+
+.btn:hover {
+  background-color: rgb(31, 199, 106);
+}
+
+/* Navigation and Footer */
+li {
+  display: inline;
+  float: left;
+  padding-left: 15px;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li a:hover {
+  background-color: rgb(31, 199, 106);
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+/* Section 4 - Featured Brands */
+.section-4 {
+  padding: 35px;
+}
+
+.brand {
+  width: 20%;
+  display: inline;
+}
+
+.brand img {
+  height: 175px;
+}
+
+/* Contact Form */
+.section-5 {
+  background-color: rgb(224, 219, 219);
+  display: grid;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to each other */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Product View and Description */
+.section-body {
+  padding-top: 30px;
+  padding-left: 15px;
+}
+
+.section-body h4 {
+  font-size: large;
+}
+
+.vertical-nav {
+  padding-top: 10px;
+}
+
+.section-body ul {
+  list-style-type: none;
+  width: 18%;
+  background-color: #d6e4f0;
+  position: fixed;
+  height: auto;
+  overflow: auto;
+}
+
+.section-body li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.section-body li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.section-body li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Gallery Image Hover Effect */
+.image-holder {
+  border: 1px solid #ccc;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.image-holder:hover {
+  border: 1px solid #777;
+  transform: scale(1.05, 1.05);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+div.desc {
+  text-align: center;
+  width: 100%;
+}
+
+.desc i {
+  float: left !important;
+  padding-left: 10px;
+}
+
+.desc button {
+  float: right !important;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.gallery img {
+  height: 250px;
+  width: 200px;
+}
