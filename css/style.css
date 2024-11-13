@@ -79,7 +79,7 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   color: white;
-  background-color: blue;
+  background-color: rgb(0, 0, 0);
   font-size: 20px;
   text-decoration: none;
 }
