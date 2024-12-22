@@ -114,9 +114,9 @@ body {
 }
 
 .image-holder img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+  width: 200px;  /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
 .image-holder:hover {
