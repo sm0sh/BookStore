@@ -61,9 +61,10 @@ html {
 /* Card Layout for Team */
 .column {
   float: left;
-  width: 33.3%;
+  width: 30%;
   margin-bottom: 16px;
-  padding: 0 8px;
+  margin-left: 50px;
+  padding: 8px;
 }
 
 .card {
@@ -77,10 +78,15 @@ html {
   justify-content: space-between;
 }
 
+/* Adjust card image position and size */
 .card img {
-  width: 100%;
-  height: 300px;
+  width: 150px; /* Circle size */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px; /* Push image downward */
 }
+
 
 .container {
   padding: 16px;
@@ -95,17 +101,19 @@ html {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 8px;
+  padding: 4px 8px; /* Smaller padding */
+  font-size: 14px;  /* Smaller font size */
   color: white;
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: auto; /* Allows the button to fit its content */
 }
 
 .button:hover {
   background-color: #555;
 }
+
 
 .about-section {
   padding: 50px;
@@ -158,7 +166,9 @@ html {
   <div class="row">
     <div class="column">
       <div class="card">
-        <center><img src="./images/ankit book ,jpeg.jpeg" alt="Ankit" style="width:100%; height:300px;"></center>
+        <center>
+          <img src="./images/ankit book ,jpeg.jpeg" alt="Ankit">
+        </center>
         <div class="container">
           <h2>Ankit</h2>
           <p class="title">CEO & Founder</p>
@@ -168,28 +178,30 @@ html {
         </div>
       </div>
     </div>
-
     <div class="column">
       <div class="card">
-        <center><img src="./images/arjun bhai photo.jpeg" alt="Abdullah" style="width:100%; height:300px;"></center>
+        <center>
+          <img src="./images/arjun bhai photo.jpeg" alt="Abdullah">
+        </center>
         <div class="container">
           <h2>Abdullah</h2>
           <p class="title">Designer</p>
           <p>“Be yourself; everyone else is already taken.”</p>
-          <p>xyz@example.com</p>
+          <p>Ab@example.com</p>
           <p><button class="button">Contact</button></p>
         </div>
       </div>
     </div>
-  
     <div class="column">
       <div class="card">
-        <center><img src="./images/abhi photo 2.jpeg" alt="Abhishek" style="width:100%; height:300px;"></center>
+        <center>
+          <img src="/images/abhi photo 2.jpeg" alt="Abhishek">
+        </center>
         <div class="container">
           <h2>Abhishek</h2>
           <p class="title">Asst. Designer</p>
           <p>“Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.”</p>
-          <p>abcd@example.com</p>
+          <p>Abhi@example.com</p>
           <p><button class="button">Contact</button></p>
         </div>
       </div>
