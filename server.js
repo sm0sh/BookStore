@@ -14,9 +14,9 @@ app.use(bodyParser.json());
 // Create a connection to the MySQL database
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root', // replace with your MySQL username
-    password: 'your_password', // replace with your MySQL password
-    database: 'your_database_name' // replace with your database name
+    user: 'root@localhost', 
+    password: 'Ishratjahan1!', 
+    database: 'Bookstore' 
 });
 
 // Connect to the database
