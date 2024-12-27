@@ -1,5 +1,3 @@
-// script.js
-
 console.log("DOM fully loaded and parsed."); // Log when DOM is loaded
 // Form Validation
 document.addEventListener("DOMContentLoaded", function() {
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (registerForm) {
         registerForm.addEventListener("submit", function(event) {
             const password = registerForm.querySelector("input[type='password']").value;
-            
             const confirmPassword = registerForm.querySelector("input[type='password'][placeholder='confirm password']").value;
             if (password !== confirmPassword) {
                 event.preventDefault();
@@ -61,9 +58,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll(".navbar a");
     navLinks.forEach(link => {
         link.addEventListener("click", function(event) {
-            event.preventDefault();
             const targetId = this.getAttribute("href");
-            document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+            if (targetId.startsWith("#")) {
+                event.preventDefault();
+                document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+            }
         });
     });
 });
