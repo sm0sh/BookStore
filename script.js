@@ -1,5 +1,6 @@
 // script.js
 
+console.log("DOM fully loaded and parsed."); // Log when DOM is loaded
 // Form Validation
 document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.querySelector(".login-form");
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (registerForm) {
         registerForm.addEventListener("submit", function(event) {
             const password = registerForm.querySelector("input[type='password']").value;
+            
             const confirmPassword = registerForm.querySelector("input[type='password'][placeholder='confirm password']").value;
             if (password !== confirmPassword) {
                 event.preventDefault();
