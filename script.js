@@ -17,14 +17,42 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Registration Form Validation
+    // Registration Form Submission
     if (registerForm) {
         registerForm.addEventListener("submit", function(event) {
+            const username = registerForm.querySelector("input[type='text']").value;
             const password = registerForm.querySelector("input[type='password']").value;
             const confirmPassword = registerForm.querySelector("input[type='password'][placeholder='confirm password']").value;
             if (password !== confirmPassword) {
                 event.preventDefault();
                 alert("Passwords do not match.");
+            } else {
+                event.preventDefault(); // Prevent default form submission
+                console.log('Sending registration data:', { username, password }); // Debugging log
+                fetch('/api/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                })
+                .then(response => {
+                    console.log('Response from server:', response); // Debugging log
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.message) {
+                        alert(data.message);
+                        if (data.user) {
+                            // Optionally redirect to login or home page
+                            window.location.href = 'login.html';
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred during registration.');
+                });
             }
         });
     }
