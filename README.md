@@ -44,4 +44,12 @@ Ankit Book Point is an online platform designed for users to browse and purchase
   - A form for users to leave messages or suggestions.
   - Input fields for first name, last name, and suggestions.
 
+## New Features
+
+- **Welcome Endpoint**:
+  - A new `/welcome` endpoint has been added to the Flask API, which returns a JSON response with a welcome message: `{"message": "Welcome to the Flask API Service!"}`.
+  
+- **Logging Functionality**:
+  - The application now includes logging capabilities that capture request metadata, such as the HTTP method and path, to help monitor and debug the application.
+  
 ## File Structure
