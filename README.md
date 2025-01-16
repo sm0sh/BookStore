@@ -51,5 +51,8 @@ Ankit Book Point is an online platform designed for users to browse and purchase
   
 - **Logging Functionality**:
   - The application now includes logging capabilities that capture request metadata, such as the HTTP method and path, to help monitor and debug the application.
+
+- **Add to Cart Option Now Available**:
+  - The application now includes the add to cart option which was before hand the buy option, this option functions as a way for the user to select all the books they wish to purchase all at once..
   
-## File Structure
+yaay!!
