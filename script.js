@@ -1,4 +1,5 @@
 console.log("DOM fully loaded and parsed."); // Log when DOM is loaded
+
 // Form Validation
 document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.querySelector(".login-form");
@@ -71,14 +72,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Shopping Cart Functionality
     const cart = [];
-    const cartCounter = document.querySelector(".cart-counter");
+const cartCounter = document.querySelector("#cart-icon");
+
 
     document.querySelectorAll(".gallery .image-holder button").forEach(button => {
+        console.log("Button found:", button); // Debugging log
+
         button.addEventListener("click", function() {
-            const bookTitle = this.parentElement.parentElement.querySelector("img").alt;
-            cart.push(bookTitle);
-            cartCounter.textContent = cart.length;
-            alert(`${bookTitle} has been added to your cart.`);
+            console.log("Button clicked!"); // Additional log for click event
+            try {
+                const bookTitle = this.parentElement.parentElement.querySelector("img").alt;
+                console.log(`Adding book to cart: ${bookTitle}`); // Debugging log
+
+                cart.push(bookTitle);
+                cartCounter.textContent = `Cart (${cart.length})`;
+
+                console.log(`${bookTitle} has been added to your cart.`); // Debugging log
+                console.log("Current cart contents:", cart); // Additional log for cart contents
+                alert(`Current cart contents: ${cart.join(', ')}`); // Alert showing current cart contents
+
+
+                alert(`${bookTitle} has been added to your cart.`);
+                console.log("Cart contents:", cart); // Debugging log
+            } catch (error) {
+                console.error('Error adding to cart:', error);
+                alert('An error occurred while adding the book to the cart.');
+            }
         });
     });
 

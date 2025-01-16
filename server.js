@@ -46,8 +46,8 @@ app.post('/api/register', (req, res) => {
         }
         db.query('INSERT INTO users (username, password) VALUES (?, ?)', [username, password], (error, results) => {
             if (error) {
-            console.error('Registration error:', error); // Log the error details
-            console.log('Registration attempt with username:', username); // Log the username for debugging
+                console.error('Registration error:', error); // Log the error details
+                console.log('Registration attempt with username:', username); // Log the username for debugging
                 return res.status(500).json({ message: 'Error registering user', error });
             }
             res.status(201).json({ message: 'User registered successfully', user: { username } });
@@ -66,8 +66,14 @@ app.post('/api/login', (req, res) => {
     });
 });
 
+// New API endpoint for adding items to the cart
+app.post('/api/cart', (req, res) => {
+    const { bookTitle } = req.body; // Get the book title from the request body
+    console.log(`Book added to cart: ${bookTitle}`); // Log the book title
+    res.status(200).json({ message: 'Book added to cart successfully', bookTitle });
+});
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-//</create_file>
